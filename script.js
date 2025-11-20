@@ -1,4 +1,37 @@
-// A map to link button IDs to their corresponding sound files
+// =======================================================
+// NEW: Digital Clock Logic
+// =======================================================
+
+function updateClock() {
+    const now = new Date(); 
+    
+    // Get time components
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    // Pad single digits with a leading zero (e.g., 9 becomes 09)
+    hours = String(hours).padStart(2, '0');
+    minutes = String(minutes).padStart(2, '0');
+    seconds = String(seconds).padStart(2, '0');
+
+    const timeString = `${hours}:${minutes}:${seconds}`;
+
+    const clockElement = document.getElementById('digital-clock');
+    if (clockElement) {
+        clockElement.textContent = timeString;
+    }
+}
+
+// Start the clock:
+updateClock(); 
+setInterval(updateClock, 1000); 
+
+
+// =======================================================
+// ORIGINAL: Soundboard Logic
+// =======================================================
+
 const soundsMap = {
     'btn-forest': 'forest.mp3',
     'btn-tavern': 'tavern.mp3',
@@ -14,18 +47,14 @@ const soundsMap = {
     'btn-chase': 'chase.mp3',
 };
 
-// An object to hold the Audio objects once they are created
 const audioPlayers = {};
 
 // 1. Initialize the Audio Players and add event listeners
 function initializeSoundboard() {
-    // Loop through the map to set up each button and its sound
     for (const [buttonId, filename] of Object.entries(soundsMap)) {
         // A. Create the Audio object
         const audio = new Audio(filename);
-        // Ensure the sound loops when it reaches the end
         audio.loop = true;
-        // Store the Audio object so we can access it later
         audioPlayers[buttonId] = audio;
 
         // B. Get the button element
@@ -40,23 +69,19 @@ function initializeSoundboard() {
 function togglePlay(buttonId, buttonElement) {
     const audio = audioPlayers[buttonId];
 
-    // Check if the audio is currently paused (meaning it's stopped or hasn't played yet)
     if (audio.paused) {
-        // Start playing the sound from the beginning
-        audio.currentTime = 0; // Reset to start
+        // Start playing the sound
+        audio.currentTime = 0; 
         audio.play().catch(error => {
-            // Error handling for auto-play restrictions on some phones
             console.error("Autoplay failed:", error);
             alert(`Tap to play ${buttonElement.textContent}`);
         });
         
-        // Add the 'playing' class to update the button's style
         buttonElement.classList.add('playing');
     } else {
         // Pause the audio
         audio.pause();
         
-        // Remove the 'playing' class
         buttonElement.classList.remove('playing');
     }
 }

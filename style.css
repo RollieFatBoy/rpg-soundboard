@@ -6,6 +6,27 @@ body {
     color: white;
 }
 
+/* NEW: Digital Clock Styling */
+#digital-clock {
+    /* Center the clock horizontally */
+    text-align: center;
+    /* Large, highly visible font size */
+    font-size: 2.5em; 
+    /* Padding for visual spacing */
+    padding: 15px; 
+    /* Choose a distinct, digital-looking font */
+    font-family: 'Courier New', monospace; 
+    /* Bright color to stand out */
+    color: #4CAF50; /* A classic digital green */
+    /* Add a subtle shadow for depth */
+    text-shadow: 0 0 10px #4CAF50, 0 0 20px rgba(76, 175, 80, 0.5);
+    /* Space it out from the buttons below */
+    margin-bottom: 10px;
+    /* Ensure it doesn't take up 100% height, leaving room for buttons */
+    height: auto; 
+}
+
+
 /* The grid container for the soundboard */
 .soundboard {
     display: grid;
@@ -13,7 +34,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px; /* Space between buttons */
     padding: 10px;
-    height: 100vh; /* Use the full height of the viewport */
+    height: calc(100vh - 80px); /* Adjusted to make room for the clock */
     box-sizing: border-box;
 }
 
