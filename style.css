@@ -1,0 +1,47 @@
+/* Basic Reset and mobile-friendly font */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1a1a1a; /* Dark background for a gaming feel */
+    color: white;
+}
+
+/* The grid container for the soundboard */
+.soundboard {
+    display: grid;
+    /* This creates a 3-column layout, which is great for phone screens */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Space between buttons */
+    padding: 10px;
+    height: 100vh; /* Use the full height of the viewport */
+    box-sizing: border-box;
+}
+
+/* Styling for all buttons */
+.soundboard button {
+    padding: 20px 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.1s;
+    background-color: #333;
+    color: #fff;
+    /* Ensure buttons are tall enough for easy tapping */
+    min-height: 80px; 
+}
+
+/* Visual feedback when a sound is playing */
+.soundboard button.playing {
+    background-color: #007bff; /* Bright blue when active */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+}
+
+/* Hover/Active styles for a professional feel */
+.soundboard button:hover {
+    background-color: #444;
+}
+.soundboard button:active {
+    opacity: 0.8;
+}
