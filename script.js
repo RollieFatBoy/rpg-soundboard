@@ -34,17 +34,17 @@ setInterval(updateClock, 1000);
 
 const soundsMap = {
     'btn-One': 'audio/Shattered.mp3',
-    'btn-Two': 'audio/rain.mp3',
-    'btn-Three': 'audio/Stormy.mp3',
+    'btn-Two': 'audio/r.mp3',
+    'btn-Three': 'audio/.mp3',
     'btn-Four': 'audio/rain.mp3',
     'btn-Five': 'audio/Stormy.mp3',
-    'btn-Six': 'audio/battle.mp3',
-    'btn-Seven': 'audio/wind.mp3',
-    'btn-Eight': 'audio/ocean.mp3',
-    'btn-Nine': 'audio/market.mp3',
-    'btn-Ten': 'audio/crypt.mp3',
-    'btn-Eleven': 'audio/alarm.mp3',
-    'btn-Twelve': 'audio/chase.mp3',
+    'btn-Six': 'audio/ba.mp3',
+    'btn-Seven': 'audio/w.mp3',
+    'btn-Eight': 'audio/oc.mp3',
+    'btn-Nine': 'audio/ma.mp3',
+    'btn-Ten': 'audio/cr.mp3',
+    'btn-Eleven': 'audio/al.mp3',
+    'btn-Twelve': 'audio/ch.mp3',
 };
 
 const audioPlayers = {};
