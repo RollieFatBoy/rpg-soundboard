@@ -40,7 +40,7 @@ const soundsMap = {
     'btn-Five': 'audio/Stormy.mp3',
     'btn-Six': 'audio/ba.mp3',
     'btn-Seven': 'audio/cave.mp3',
-    'btn-Eight': 'audio/oc.mp3',
+    'btn-Eight': 'audio/Town.mp3',
     'btn-Nine': 'audio/ma.mp3',
     'btn-Ten': 'audio/cr.mp3',
     'btn-Eleven': 'audio/al.mp3',
