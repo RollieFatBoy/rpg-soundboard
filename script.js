@@ -55,22 +55,35 @@ function initializeSoundboard() {
         // A. Create the Audio object
         const audio = new Audio(filename);
         audio.loop = true;
+        // Set initial volume based on the slider default (70%)
+        audio.volume = 0.7;
         audioPlayers[buttonId] = audio;
 
-        // B. Get the button element
+        // B. Get the button element and add the click handler (play/pause)
         const button = document.getElementById(buttonId);
-        
-        // C. Add the click handler
         button.addEventListener('click', () => togglePlay(buttonId, button));
+       } 
+        // **NEW:** Add listener for the master volume slider
+    const masterSlider = document.getElementById('master-volume-slider');
+    masterSlider.addEventListener('input', handleMasterVolumeChange);
+    
+}
+
+// 2. **NEW FUNCTION:** Handle the master volume slider input
+function handleMasterVolumeChange(event) {
+    const newVolume = event.target.value / 100; // Convert 0-100 to 0.0-1.0
+    
+    // Loop through ALL audio players and update their volume
+    for (const buttonId in audioPlayers) {
+        audioPlayers[buttonId].volume = newVolume;
     }
 }
 
-// 2. The core function to start or stop a sound
+// 3. The core function to start or stop a sound (UNMODIFIED)
 function togglePlay(buttonId, buttonElement) {
     const audio = audioPlayers[buttonId];
 
     if (audio.paused) {
-        // Start playing the sound
         audio.currentTime = 0; 
         audio.play().catch(error => {
             console.error("Autoplay failed:", error);
@@ -79,9 +92,7 @@ function togglePlay(buttonId, buttonElement) {
         
         buttonElement.classList.add('playing');
     } else {
-        // Pause the audio
         audio.pause();
-        
         buttonElement.classList.remove('playing');
     }
 }
