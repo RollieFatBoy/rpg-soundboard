@@ -21,7 +21,7 @@ body {
     /* Add a subtle shadow for depth */
     text-shadow: 0 0 10px #4CAF50, 0 0 20px rgba(76, 175, 80, 0.5);
     /* Space it out from the buttons below */
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     /* Ensure it doesn't take up 100% height, leaving room for buttons */
     height: auto; 
 }
