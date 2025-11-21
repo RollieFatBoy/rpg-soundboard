@@ -34,7 +34,7 @@ setInterval(updateClock, 1000);
 
 const soundsMap = {
     'btn-One': 'audio/Shattered.mp3',
-    'btn-Two': 'audio/r.mp3',
+    'btn-Two': 'audio/Music.mp3',
     'btn-Three': 'audio/.mp3',
     'btn-Four': 'audio/rain.mp3',
     'btn-Five': 'audio/Stormy.mp3',
