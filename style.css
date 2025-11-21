@@ -26,40 +26,7 @@ body {
     height: auto; 
 }
 
-/* NEW: Master Controls Styling */
-#master-controls {
-    text-align: center;
-    padding: 5px 15px 15px;
-    border-bottom: 1px solid #333;
-    margin-bottom: 10px;
-    display: flex; /* Arrange label and slider side-by-side */
-    align-items: center;
-    justify-content: center;
-}
-#master-controls label {
-    font-weight: bold;
-    margin-right: 15px;
-}
 
-/* NEW: Master Volume Slider Styling */
-#master-volume-slider {
-    width: 50%;
-    height: 10px;
-    cursor: pointer;
-    -webkit-appearance: none;
-    appearance: none;
-    background: #555;
-    border-radius: 5px;
-}
-#master-volume-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #007bff;
-    cursor: pointer;
-}
 
 /* The grid container for the soundboard */
 .soundboard {
