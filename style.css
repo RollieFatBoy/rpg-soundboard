@@ -42,14 +42,14 @@ body {
 /* Styling for all buttons */
 .soundboard button {
     padding: 20px 10px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     border: none;
     border-radius: 8px;
     transition: background-color 0.1s;
     background-color: #BDB76B;
-    color: #fff;
+    color: #2F4F4F;
     /* Ensure buttons are tall enough for easy tapping */
     min-height: 80px; 
 }
