@@ -17,7 +17,7 @@ body {
     /* Choose a distinct, digital-looking font */
     font-family: 'Courier New', monospace; 
     /* Bright color to stand out */
-    color: #000000; /* A classic digital black*/
+    color: #00FF00; /* A classic digital Lime */
     /* Add a subtle shadow for depth */
     text-shadow: 0 0 10px #4CAF50, 0 0 20px rgba(76, 175, 80, 0.5);
     /* Space it out from the buttons below */
